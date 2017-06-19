@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSI</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <style>
+            html, body {
+                font-family: Open Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                color: #2b0000;
+                font-size: 14px;
+                line-height: 24px;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .article-body {
+                font-size: 18px;
+            }
+            .img-circle {
+                border-radius: 50%;
+            }
+            .article-title {
+                color: #fd6b0d;
+            }
+            .link-text {
+                color: #fd6b0d;
+                font-size: 18px;
+            }
+            .text-center {
+                text-align:center;
+            }
+            #map {
+                width: 100%;
+                height: 400px;
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text-center">
+            <img class="img-circle" src="http://www.lumenlab.sg/wp-content/uploads/2016/05/Websiteprofilepictures-Squared-6.jpg">
+            </br>
+            <h1>Thazin Win</h1><br>
+            <a href="https://www.linkedin.com/in/thazinwin/" class="link-text" target="_blank">View <strong>Thazin Win</strong> on LinkedIn</a>
+        </div>
+        <div>
+            <strong class="article-title">ROLE SUMMARY</strong>
+            <p>
+                Thazin is responsible for product development insights and the technical acumen to transform the innovative ideas into architecture and code. She plays a critical role for outgoing development and supporting multiple projects with cutting edge technologies to build elegant and ambitious products.
+            </p>
+        </div>
+        <div>
+            <strong class="article-title">BACKGROUND</strong>
+            <p>
+                Thazin is a self-confessed geek came along from startups to global insurance industries. Her specialities lie in project management, designing and developing the application with extensive in full software development life cycle. She is a graduate from Institute of System Science (ISS), National University of Singapore and got a degree from University of Computer Studies, Yangon, Myanmar.
+            </p>
+            <p>
+                Outside of work, she is a real foodie, always exploring different cuisines and a total coffee snob.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <strong class="article-title">CONTACT</strong>
+        </div>
+        <br>
+        <div id="map">
+        </div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=initMap"></script>
+        <script>
+            function initMap() {
+                var uluru = {lat: 1.305977, lng: 103.791509};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                scrollwheel: false,
+                scaleControl: true,
+                center: uluru
+                });
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+                });
+            }
+        </script>
+    </body>
+</html>
